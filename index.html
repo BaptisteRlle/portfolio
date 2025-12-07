@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Baptiste ROULLEE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <canvas id="bg-canvas"></canvas>
+
+    <nav id="navbar">
+        <div class="nav-container">
+            <ul id="navMenu">
+                <li><a href="#accueil" class="active">Accueil</a></li>
+                <li><a href="#description">À propos</a></li>
+                <li><a href="#parcours">Parcours</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section id="accueil">
+        <div class="hero-content">
+            <h1>Baptiste ROULLEE</h1>
+            <p class="subtitle">Étudiant en BUT Informatique</p>
+            <p class="description">
+                Étudiant en 2ᵉ année de BUT Informatique à Arles.
+            </p>
+            <div class="cta-buttons">
+                <a href="#projets" class="btn primary">Voir mes projets</a>
+                <a href="#contact" class="btn">Me contacter</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <section id="description">
+        <div class="container">
+            <h2 class="section-title">À propos de moi</h2>
+            <div class="about-grid">
+                <div class="about-image">👤</div>
+                <div class="about-text">
+                    <p>
+                        Je m'appelle Baptiste ROULLEE, j'ai 19 ans et je suis actuellement étudiant en 2ᵉ année 
+                        de BUT Informatique à Arles. J'ai toujours été attiré par les domaines scientifiques, 
+                        en particulier l'informatique et les mathématiques.
+                    </p>
+                    <p>
+                        C'est au collège que j'ai commencé à m'intéresser au fonctionnement des applications 
+                        et des algorithmes : comprendre ce qu'il se passe "derrière l'écran" m'a naturellement 
+                        orienté vers l'informatique. J'ai direct essayé de créer des algorithmes simples et des petits jeux, notamment sur Scratch.
+    
+                    </p>
+                    <p>
+                        Aujourd'hui, j'ai choisi le BUT Informatique pour développer mes compétences en développement que ce soit logiciel ou web, mais aussi
+                        pour apprendre à travailler sur des projets en équipe, ce qui est essentiel dans le monde professionnel.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="parcours">
+        <div class="container">
+            <h2 class="section-title">Mon Parcours</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2024 - ...</div>
+                        <h3>BUT Informatique</h3>
+                        <p><strong>IUT d'Arles (BUT Informatique)</strong></p>
+                        <p>
+                            Actuellement en préparation du BUT Informatique après avoir validé ma 1ʳᵉ année. 
+                            Le cursus me permet d'aborder la programmation, l'algorithmique, les bases de données, 
+                            le développement web ainsi que le travail en projet.
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2021 - 2024</div>
+                        <h3>Bac Général</h3>
+                        <p><strong>Lycée – spécialités Mathématiques & Physique-Chimie</strong></p>
+                        <p>
+                            Obtention du Baccalauréat Général avec spécialités Mathématiques et Physique-Chimie, 
+                            mention Assez Bien. Cette formation m'a donné une base solide en sciences et en logique, 
+                            utile pour la poursuite d'études en informatique.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="competences">
+        <div class="container">
+            <h2 class="section-title">Compétences</h2>
+            <div class="skills-container">
+                <div class="skill-category" onclick="toggleSkill(0)">
+                    <div class="skill-header">
+                        <h3>Développement Web</h3>
+                        <span class="skill-toggle">▼</span>
+                    </div>
+                    <div class="skill-content">
+                        <div class="skill-grid">
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fab fa-html5"></i>
+                                </div>
+                                <div class="skill-name">HTML5</div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fab fa-css3-alt"></i>
+                                </div>
+                                <div class="skill-name">CSS3</div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fab fa-js-square"></i>
+                                </div>
+                                <div class="skill-name">JavaScript</div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <div class="skill-name">Intégration d'interfaces</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category" onclick="toggleSkill(1)">
+                    <div class="skill-header">
+                        <h3>Programmation & Logiciel</h3>
+                        <span class="skill-toggle">▼</span>
+                    </div>
+                    <div class="skill-content">
+                        <div class="skill-grid">
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fab fa-cuttlefish"></i>
+                                </div>
+                                <div class="skill-name">C++ / Qt</div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fab fa-java"></i>
+                                </div>
+                                <div class="skill-name">Java / JavaFX</div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fab fa-python"></i>
+                                </div>
+                                <div class="skill-name">Python</div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fas fa-terminal"></i>
+                                </div>
+                                <div class="skill-name">Bash</div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <div class="skill-name">SQL (PostgreSQL)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category" onclick="toggleSkill(2)">
+                    <div class="skill-header">
+                        <h3>Soft Skills & Méthodes</h3>
+                        <span class="skill-toggle">▼</span>
+                    </div>
+                    <div class="skill-content">
+                        <div class="skill-grid">
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="skill-name">Travail d'équipe</div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div class="skill-name">Méthodes agiles</div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fas fa-project-diagram"></i>
+                                </div>
+                                <div class="skill-name">Scrum</div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fas fa-cogs"></i>
+                                </div>
+                                <div class="skill-name">Organisation & rigueur</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projets">
+        <div class="container">
+            <h2 class="section-title">Mes Projets</h2>
+            <p class="projects-subtitle">
+                <i class="fab fa-github"></i> 
+                Tous mes projets sont disponibles sur mon 
+                <a href="https://github.com/BaptisteRlle" target="_blank" class="github-link">GitHub</a>
+            </p>
+            <div class="projects-grid">
+                <div class="project-card" onclick="openModal(0)">
+                    <div class="project-image">
+                        <img src="img/agenda-cpp.jpg" alt="Agenda C++">
+                    </div>
+                    <div class="project-content">
+                        <h3>Agenda C++</h3>
+                        <p>
+                            Développement d'un agenda en C++ permettant de gérer plusieurs événements, 
+                            avec ajout, suppression, affichage et export.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag"><i class="fab fa-cuttlefish"></i> C++</span>
+                            <span class="tag"><i class="fas fa-project-diagram"></i> Algorithmes</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" onclick="openModal(1)">
+                    <div class="project-image">
+                        <img src="img/portfolio.jpg" alt="Portfolio">
+                    </div>
+                    <div class="project-content">
+                        <h3>Portfolio personnel</h3>
+                        <p>
+                            Création de mon portfolio en HTML, CSS et JavaScript pour présenter mon parcours, 
+                            mes compétences et mes projets.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag"><i class="fab fa-html5"></i> HTML</span>
+                            <span class="tag"><i class="fab fa-css3-alt"></i> CSS</span>
+                            <span class="tag"><i class="fab fa-js"></i> JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" onclick="openModal(2)">
+                    <div class="project-image">
+                        <img src="img/morpion.jpg" alt="Morpion JS">
+                    </div>
+                    <div class="project-content">
+                        <h3>Morpion JS</h3>
+                        <p>
+                            Application web proposant plusieurs variantes du jeu du morpion, 
+                            avec différents modes de jeu (1v1, 1vBot) et plusieurs versions du plateau.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag"><i class="fab fa-js"></i> JavaScript</span>
+                            <span class="tag"><i class="fas fa-gamepad"></i> Jeu</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" onclick="openModal(3)">
+                    <div class="project-image">
+                        <img src="img/footstats.jpg" alt="FootStats">
+                    </div>
+                    <div class="project-content">
+                        <h3>FootStats</h3>
+                        <p>
+                            Application web permettant de rechercher une ligue de football, d'afficher ses équipes, 
+                            leurs informations détaillées ainsi que le top du classement via l'API TheSportsDB.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag"><i class="fab fa-js"></i> JavaScript ES6</span>
+                            <span class="tag"><i class="fas fa-server"></i> API REST</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:baptisteroullee@icloud.com">baptisteroullee@icloud.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
+                            <div>
+                                <h4>LinkedIn</h4>
+                                <a href="https://www.linkedin.com/in/baptiste-roullee" target="_blank">
+                                    LinkedIn
+                                </a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fab fa-github"></i></div>
+                            <div>
+                                <h4>GitHub</h4>
+                                <a href="https://github.com/BaptisteRlle" target="_blank">
+                                    GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <form onsubmit="handleSubmit(event)">
+                            <div class="form-group">
+                                <label for="name">Nom</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn primary">Envoyer</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal" id="projectModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">×</button>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+</body>
+</html>
