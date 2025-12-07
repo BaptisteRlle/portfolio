@@ -284,10 +284,10 @@ const projects = [
                     nouveaux modes de jeu :
                 </p>
                 <p>
-                    – Morpion classique (3×3) : gestion des coups, détection de victoire, modes 1v1 et 1vBot.<br>
-                    – Morpion Ultime : version avancée composée de 9 sous-grilles avec règles spécifiques.<br>
-                    – Morpion 2.0 : variante spéciale avec contraintes supplémentaires.<br>
-                    – Bot simple : IA basique qui joue des coups valides.
+                    — Morpion classique (3×3) : gestion des coups, détection de victoire, modes 1v1 et 1vBot.<br>
+                    — Morpion Ultime : version avancée composée de 9 sous-grilles avec règles spécifiques.<br>
+                    — Morpion 2.0 : variante spéciale avec contraintes supplémentaires.<br>
+                    — Bot simple : IA basique qui joue des coups valides.
                 </p>
                 <p>
                     Le site fonctionne sans rechargement : tout est géré dynamiquement via JavaScript.
@@ -379,6 +379,51 @@ const projects = [
                 <span class="tag"><i class="fas fa-object-group"></i> POO</span>
                 <span class="tag"><i class="fas fa-server"></i> API REST</span>
                 <span class="tag"><i class="fas fa-box"></i> Webpack</span>
+            </div>
+        `
+    },
+    {
+        title: "FoodHub",
+        screenshots: [
+            "img/foodhub-1.jpg",
+            "img/foodhub-2.jpg"
+        ],
+        description: `
+            <div class="project-detail">
+                <h4><i class="fas fa-bullseye"></i> Objectif</h4>
+                <p>
+                    [À compléter : Objectif du projet FoodHub]
+                </p>
+            </div>
+            <div class="modal-screenshots">
+                <img src="img/foodhub-1.jpg" alt="FoodHub Interface">
+                <img src="img/foodhub-2.jpg" alt="FoodHub Détails">
+            </div>
+            <div class="project-detail">
+                <h4><i class="fas fa-tools"></i> Technologies utilisées</h4>
+                <p>[À compléter : Technologies utilisées pour FoodHub]</p>
+            </div>
+            <div class="project-detail">
+                <h4><i class="fas fa-lightbulb"></i> Développement</h4>
+                <p>
+                    [À compléter : Description du développement de FoodHub]
+                </p>
+            </div>
+            <div class="project-detail">
+                <h4><i class="fas fa-star"></i> Fonctionnalités principales</h4>
+                <p>
+                    [À compléter : Fonctionnalités principales de FoodHub]
+                </p>
+            </div>
+            <div class="project-detail">
+                <h4><i class="fas fa-chart-bar"></i> Résultats</h4>
+                <p>
+                    [À compléter : Résultats et apprentissages du projet FoodHub]
+                </p>
+            </div>
+            <div class="modal-tags">
+                <span class="tag"><i class="fas fa-utensils"></i> Recettes</span>
+                <span class="tag"><i class="fas fa-database"></i> Gestion</span>
             </div>
         `
     }
