@@ -392,39 +392,56 @@ const projects = [
             <div class="project-detail">
                 <h4><i class="fas fa-bullseye"></i> Objectif</h4>
                 <p>
-                    [À compléter : Objectif du projet FoodHub]
+                    L’objectif était de développer une application complète en Java afin de découvrir JavaFX 
+                    et de mettre en pratique la création d’une interface moderne tout en manipulant une base de données.
                 </p>
             </div>
+
             <div class="modal-screenshots">
                 <img src="img/foodhub-1.jpg" alt="FoodHub Interface">
                 <img src="img/foodhub-2.jpg" alt="FoodHub Détails">
             </div>
+
             <div class="project-detail">
                 <h4><i class="fas fa-tools"></i> Technologies utilisées</h4>
-                <p>[À compléter : Technologies utilisées pour FoodHub]</p>
+                <p>
+                    Java, JavaFX pour l’interface graphique, PostgreSQL hébergé sur AlwaysData pour la gestion des données,
+                    et utilisation du design pattern Singleton.
+                </p>
             </div>
+
             <div class="project-detail">
                 <h4><i class="fas fa-lightbulb"></i> Développement</h4>
                 <p>
-                    [À compléter : Description du développement de FoodHub]
+                    Le projet a consisté à mettre en place une architecture claire et modulaire 
+                    tout en assurant la communication entre l’interface JavaFX et la base PostgreSQL. 
+                    Le pattern Singleton a été utilisé pour gérer la connexion à la base de données de manière fiable et centralisée.
                 </p>
             </div>
+
             <div class="project-detail">
                 <h4><i class="fas fa-star"></i> Fonctionnalités principales</h4>
                 <p>
-                    [À compléter : Fonctionnalités principales de FoodHub]
+                    Gestion basique des recettes : ajout, consultation, recherche et tri des recettes selon différents critères. 
+                    Une interface simple permet d’explorer les données et de naviguer entre les différentes vues.
                 </p>
             </div>
+
             <div class="project-detail">
                 <h4><i class="fas fa-chart-bar"></i> Résultats</h4>
                 <p>
-                    [À compléter : Résultats et apprentissages du projet FoodHub]
+                    Ce projet m’a permis de consolider mes compétences en Java, d’apprendre à concevoir une interface JavaFX 
+                    et d’interagir avec une base de données PostgreSQL. Il m’a également aidé à mieux structurer une application 
+                    grâce à l’utilisation de design patterns.
                 </p>
             </div>
+
             <div class="modal-tags">
+                <span class="tag"><i class="fas fa-java"></i> Java</span>
                 <span class="tag"><i class="fas fa-utensils"></i> Recettes</span>
                 <span class="tag"><i class="fas fa-database"></i> Gestion</span>
             </div>
+
         `
     }
 ];

@@ -570,6 +570,19 @@ section {
     height: 250px;
     position: relative;
     overflow: hidden;
+    background: linear-gradient(135deg, var(--secondary), var(--accent));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-emoji {
+    font-size: 8rem;
+    transition: transform 0.4s;
+}
+
+.project-card:hover .project-emoji {
+    transform: scale(1.2) rotate(5deg);
 }
 
 .project-image img {
