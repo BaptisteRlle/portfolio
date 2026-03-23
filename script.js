@@ -145,8 +145,8 @@ const projects = [
     {
         title: "Agenda C++",
         screenshots: [
-            "img/agenda-cpp-1.jpg",
-            "img/agenda-cpp-2.jpg"
+            "img/agenda1.png",
+            "img/agenda2.png"
         ],
         description: `
             <div class="project-detail">
@@ -157,8 +157,8 @@ const projects = [
                 </p>
             </div>
             <div class="modal-screenshots">
-                <img src="img/agenda-cpp-1.jpg" alt="Interface Agenda">
-                <img src="img/agenda-cpp-2.jpg" alt="Code C++">
+                <img src="img/agenda1.png" alt="Interface Agenda">
+                <img src="img/agenda2.png" alt="Code C++">
             </div>
             <div class="project-detail">
                 <h4><i class="fas fa-tools"></i> Technologies utilisées</h4>
@@ -202,8 +202,8 @@ const projects = [
     {
         title: "Portfolio personnel",
         screenshots: [
-            "img/portfolio-1.jpg",
-            "img/portfolio-2.jpg"
+            "img/portfolio1.png",
+            "img/portfolio2.png"
         ],
         description: `
             <div class="project-detail">
@@ -214,8 +214,8 @@ const projects = [
                 </p>
             </div>
             <div class="modal-screenshots">
-                <img src="img/portfolio-1.jpg" alt="Portfolio Accueil">
-                <img src="img/portfolio-2.jpg" alt="Portfolio Projets">
+                <img src="img/portfolio1.png" alt="Portfolio Accueil">
+                <img src="img/portfolio2.png" alt="Portfolio Projets">
             </div>
             <div class="project-detail">
                 <h4><i class="fas fa-tools"></i> Technologies utilisées</h4>
@@ -258,8 +258,8 @@ const projects = [
     {
         title: "Morpion JS",
         screenshots: [
-            "img/morpion-1.jpg",
-            "img/morpion-2.jpg"
+            "img/morpion1.png",
+            "img/morpion2.png"
         ],
         description: `
             <div class="project-detail">
@@ -270,8 +270,8 @@ const projects = [
                 </p>
             </div>
             <div class="modal-screenshots">
-                <img src="img/morpion-1.jpg" alt="Morpion Interface">
-                <img src="img/morpion-2.jpg" alt="Morpion Gameplay">
+                <img src="img/morpion1.png" alt="Morpion Interface">
+                <img src="img/morpion2.png" alt="Morpion Gameplay">
             </div>
             <div class="project-detail">
                 <h4><i class="fas fa-tools"></i> Technologies utilisées</h4>
@@ -319,8 +319,8 @@ const projects = [
     {
         title: "FootStats",
         screenshots: [
-            "img/footstats-1.jpg",
-            "img/footstats-2.jpg"
+            "img/footstats1.png",
+            "img/footstats2.png"
         ],
         description: `
             <div class="project-detail">
@@ -332,8 +332,8 @@ const projects = [
                 </p>
             </div>
             <div class="modal-screenshots">
-                <img src="img/footstats-1.jpg" alt="FootStats Interface">
-                <img src="img/footstats-2.jpg" alt="FootStats Équipes">
+                <img src="img/footstats1.png" alt="FootStats Interface">
+                <img src="img/footstats2.png" alt="FootStats Équipes">
             </div>
             <div class="project-detail">
                 <h4><i class="fas fa-tools"></i> Technologies utilisées</h4>
@@ -385,8 +385,8 @@ const projects = [
     {
         title: "FoodHub",
         screenshots: [
-            "img/foodhub-1.jpg",
-            "img/foodhub-2.jpg"
+            "img/foodhub1.jpg",
+            "img/foodhub2.jpg"
         ],
         description: `
             <div class="project-detail">
@@ -398,8 +398,8 @@ const projects = [
             </div>
 
             <div class="modal-screenshots">
-                <img src="img/foodhub-1.jpg" alt="FoodHub Interface">
-                <img src="img/foodhub-2.jpg" alt="FoodHub Détails">
+                <img src="img/foodhub1.jpg" alt="FoodHub Interface">
+                <img src="img/foodhub2.jpg" alt="FoodHub Détails">
             </div>
 
             <div class="project-detail">
@@ -474,18 +474,62 @@ function toggleSkill(index) {
     toggle.classList.toggle('active');
 }
 
+// Initialise EmailJS avec ta Public Key
+(function(){
+    emailjs.init("I6MspnznF52DfBvWX");
+})();
+
+// Fonction pour envoyer le formulaire
 function handleSubmit(e) {
     e.preventDefault();
+    
     const btn = e.target.querySelector('button');
     const originalText = btn.textContent;
-    btn.textContent = '✓ Message envoyé !';
-    btn.style.background = '#6bbd8f';
-
-    setTimeout(() => {
-        btn.textContent = originalText;
-        btn.style.background = '';
-        e.target.reset();
-    }, 3000);
+    const form = e.target;
+    
+    // Change le bouton en état "envoi en cours"
+    btn.textContent = '⏳ Envoi en cours...';
+    btn.disabled = true;
+    btn.style.background = '#3d8b5c';
+    
+    // Prépare les données du formulaire
+    const templateParams = {
+        from_name: form.name.value,
+        from_email: form.email.value,
+        message: form.message.value
+    };
+    
+    // Envoie l'email via EmailJS
+    emailjs.send('service_zo9rr6x', 'template_e7c0jl4', templateParams)
+        .then(function(response) {
+            console.log('✅ Email envoyé !', response.status, response.text);
+            
+            // Message de succès
+            btn.textContent = '✓ Message envoyé !';
+            btn.style.background = '#6bbd8f';
+            
+            // Réinitialise le formulaire après 3 secondes
+            setTimeout(() => {
+                btn.textContent = originalText;
+                btn.style.background = '';
+                btn.disabled = false;
+                form.reset();
+            }, 3000);
+            
+        }, function(error) {
+            console.error('❌ Erreur lors de l\'envoi:', error);
+            
+            // Message d'erreur
+            btn.textContent = '❌ Erreur, réessayez';
+            btn.style.background = '#d32f2f';
+            
+            // Réactive le bouton après 3 secondes
+            setTimeout(() => {
+                btn.textContent = originalText;
+                btn.style.background = '';
+                btn.disabled = false;
+            }, 3000);
+        });
 }
 
 window.addEventListener('load', () => {
